@@ -1,0 +1,113 @@
+@import '../../../styles/variables';
+
+$body: #fef3c7;
+$stroke: #111827;
+$shadow: #db2777;
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.asideBackground {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 55rem;
+  height: 600px;
+  z-index: 1;
+  opacity: 0.2;
+  background-color: #0d1f2d;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #0d1f2d 20%,
+      #0d1f2d 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #0d1f2d 20%,
+        #0d1f2d 80%,
+        transparent 80%,
+        transparent
+      )
+      25px 25px,
+    linear-gradient(#e5e5f7 2px, transparent 2px) 0 -1px,
+    linear-gradient(90deg, #e5e5f7 2px, #0d1f2d 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+@media screen and (max-width: 768px) {
+  h3,
+  .strokeShadow {
+    text-align: center !important;
+  }
+}
+
+.strokeShadow {
+  color: #afffff;
+  text-shadow: -2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827,
+    2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827,
+    6px 6px #ffe0c8 !important;
+}
+
+.strokeShadow span:hover {
+  font-weight: 600 !important;
+  transition: all 0.3s ease-out;
+  cursor: default;
+  display: inline-block;
+  color: #ff3d3d;
+  -webkit-animation: rubberBand;
+  animation: rubberBand;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.vector {
+  width: 25rem;
+  animation: slideAnimation 1s forwards;
+  transition: all 0.5s ease-out;
+}
+
+.vector:hover {
+  filter: hue-rotate(25deg);
+}
+
+@keyframes slideAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
