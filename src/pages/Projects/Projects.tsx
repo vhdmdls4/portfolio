@@ -1,5 +1,5 @@
-import styles from './assets/Projects.module.scss';
+// import styles from './assets/Projects.module.scss';
 
-export function Projects() {
-  return <div>Projects</div>;
-}
+// export function Projects() {
+//   return <div>Projects</div>
+// }
