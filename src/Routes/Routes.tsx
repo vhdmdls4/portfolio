@@ -4,9 +4,7 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom'
 import ErrorPage from '../ErrorPage'
-import { Contacts } from '../pages/Contacts/Contacts'
 import Home from '../pages/Home/Home'
-import { Projects } from '../pages/Projects/Projects'
 import App from '../App'
 
 export const router = createBrowserRouter(
